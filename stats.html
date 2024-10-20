@@ -9,64 +9,88 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <!-- TODO: Add logo -->
-            <!-- <img src="logo.png" alt="Flight Finder Logo" style="height:40px;"> -->
-            Flight Finder
+      <div class="logo">
+        <!-- TODO: Add logo -->
+        <!-- <img src="logo.png" alt="Flight Finder Logo" style="height:40px;"> -->
+        Flight Finder
+      </div>
+
+      <!-- Burger menu icon for small screens -->
+      <button
+        class="burger-menu"
+        aria-label="Toggle menu"
+        onclick="toggleMenu()"
+      >
+        &#9776;
+      </button>
+
+      <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="deals.html">Cheapest Flights</a>
+        <a href="stats.html">Airline Statistics</a>
+      </nav>
+
+      <div class="profile">
+        <button class="profile-btn">Profile</button>
+        <div class="profile-dropdown">
+          <!-- TODO: Add links to login, register, and account settings -->
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+          <a href="#">Account Settings</a>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="deals.html">Cheapest Flights</a>
-            <a href="stats.html">Airline Statistics</a>
-        </nav>
-        <div class="profile">
-            <button class="profile-btn">Profile</button>
-            <div class="profile-dropdown">
-                <a href="#">Login</a>
-                <a href="#">Register</a>
-                <a href="#">Account Settings</a>
-            </div>
-        </div>
+      </div>
     </header>
 
     <div class="container">
         <h2>Compare Airlines by Performance</h2>
         <table>
-            <tr>
-                <th>Airline</th>
-                <th>Punctuality (%)</th>
-                <th>Customer Satisfaction</th>
-                <th>Average Ticket Price ($)</th>
-            </tr>
-            <tr>
-                <td>Delta</td>
-                <td>90</td>
-                <td>4.5/5</td>
-                <td>350</td>
-            </tr>
-            <tr>
-                <td>American Airlines</td>
-                <td>85</td>
-                <td>4.0/5</td>
-                <td>300</td>
-            </tr>
-            <tr>
-                <td>United Airlines</td>
-                <td>88</td>
-                <td>4.2/5</td>
-                <td>330</td>
-            </tr>
-            <tr>
-                <td>Southwest</td>
-                <td>92</td>
-                <td>4.7/5</td>
-                <td>290</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Airline</th>
+                    <th>Punctuality (%)</th>
+                    <th>Customer Satisfaction</th>
+                    <th>Average Ticket Price ($)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Airline">Delta</td>
+                    <td data-label="Punctuality (%)">90</td>
+                    <td data-label="Customer Satisfaction">4.5/5</td>
+                    <td data-label="Average Ticket Price ($)">350</td>
+                </tr>
+                <tr>
+                    <td data-label="Airline">American Airlines</td>
+                    <td data-label="Punctuality (%)">85</td>
+                    <td data-label="Customer Satisfaction">4.0/5</td>
+                    <td data-label="Average Ticket Price ($)">300</td>
+                </tr>
+                <tr>
+                    <td data-label="Airline">United Airlines</td>
+                    <td data-label="Punctuality (%)">88</td>
+                    <td data-label="Customer Satisfaction">4.2/5</td>
+                    <td data-label="Average Ticket Price ($)">330</td>
+                </tr>
+                <tr>
+                    <td data-label="Airline">Southwest</td>
+                    <td data-label="Punctuality (%)">92</td>
+                    <td data-label="Customer Satisfaction">4.7/5</td>
+                    <td data-label="Average Ticket Price ($)">290</td>
+                </tr>
+            </tbody>
         </table>
     </div>
+    
 
     <footer>
         <p>&copy; 2024 Flight Finder</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+          var navLinks = document.getElementById("nav-links");
+          navLinks.classList.toggle("show");
+        }
+      </script>
 </body>
 </html>

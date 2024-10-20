@@ -9,24 +9,36 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <!-- TODO: Add logo -->
-            <!-- <img src="logo.png" alt="Flight Finder Logo" style="height:40px;"> -->
-            Flight Finder
+      <div class="logo">
+        <!-- TODO: Add logo -->
+        <!-- <img src="logo.png" alt="Flight Finder Logo" style="height:40px;"> -->
+        Flight Finder
+      </div>
+
+      <!-- Burger menu icon for small screens -->
+      <button
+        class="burger-menu"
+        aria-label="Toggle menu"
+        onclick="toggleMenu()"
+      >
+        &#9776;
+      </button>
+
+      <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="deals.html">Cheapest Flights</a>
+        <a href="stats.html">Airline Statistics</a>
+      </nav>
+
+      <div class="profile">
+        <button class="profile-btn">Profile</button>
+        <div class="profile-dropdown">
+          <!-- TODO: Add links to login, register, and account settings -->
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+          <a href="#">Account Settings</a>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="deals.html">Cheapest Flights</a>
-            <a href="stats.html">Airline Statistics</a>
-        </nav>
-        <div class="profile">
-            <button class="profile-btn">Profile</button>
-            <div class="profile-dropdown">
-                <a href="#">Login</a>
-                <a href="#">Register</a>
-                <a href="#">Account Settings</a>
-            </div>
-        </div>
+      </div>
     </header>
 
     <div class="container">
@@ -62,5 +74,12 @@
     <footer>
         <p>&copy; 2024 Flight Finder</p>
     </footer>
+    
+    <script>
+      function toggleMenu() {
+        var navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("show");
+      }
+    </script>
 </body>
 </html>

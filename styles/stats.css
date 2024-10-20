@@ -1,27 +1,95 @@
 header {
     background-color: #023e8a;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
 }
+
 th, td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
+
 th {
     background-color: #0077b6;
     color: white;
 }
+
+/* Responsive table for medium screens */
+@media (max-width: 768px) {
+    nav {
+      background-color: #023e8a;
+    }
+    .container {
+        overflow-x: auto; /* Enable horizontal scroll for small screens */
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        white-space: nowrap;
+    }
+}
+
+/* Stack table data on very small screens */
+@media (max-width: 480px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none; /* Hide table headers */
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #0077b6; /* Optional: visual separation for rows */
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    td:before {
+        content: attr(data-label); /* Display label from data-label attribute */
+        font-weight: bold;
+        flex-basis: 45%; /* Take up 45% of the row */
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    td {
+        flex-basis: 55%; /* Take up remaining space for the actual data */
+        text-align: right;
+    }
+}
+
+
 footer {
     background-color: #023e8a;
-    color: white;
-    text-align: center;
-    padding: 10px;
 }
+
+ 

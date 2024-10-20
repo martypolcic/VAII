@@ -24,3 +24,21 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    nav {
+      background-color: #023e8a;
+    }
+    .flight-grid {
+      grid-template-columns: repeat(2, 1fr); /* Show 2 elements per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .flight-grid {
+      grid-template-columns: 1fr; /* Show 1 element per row on very small screens */
+    }
+  }
+  
