@@ -32,12 +32,13 @@
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 18px;
-
-  &:hover {
-    background-color: #005f8b;
-  }
+  font-size: 18px; 
 }
+
+.btn-primary:hover {
+  background-color: #005f8b;
+}
+
 .container {
   padding: 20px;
   max-width: 1200px;
