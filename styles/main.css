@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+/* navbar styles */
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.profile {
+    position: relative;
+}
+.profile-btn {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+}
+.profile-dropdown a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    white-space: nowrap;
+}
+.profile-dropdown a:hover {
+    background-color: #f0f0f0;
+}
+.profile:hover .profile-dropdown {
+    display: block;
+}
